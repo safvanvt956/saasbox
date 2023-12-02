@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Saasbox - Multipurpose HTML Template for Saas &amp; Agency">
+    <!-- Title-->
+    <title>Saasbox - Multipurpose HTML Template for Saas &amp; Agency</title>
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{% static 'web/img/core-img/favicon.ico' %}" type="image/x-icon">
+    <!-- All CSS Stylesheet-->
+    <link rel="stylesheet" href="{% static 'web/css/all-css-libraries.css' %}">
+    <!-- Core Stylesheet-->
+    <link rel="stylesheet" href="{% static 'web/css/style.css' %}">
+
+    <!-- link-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+   
+    
+  </head>
+  <body>
+
+
+    {% include 'web/partail/header.html' %}
+    {% block content %}
+    
+    {% endblock %}
+    {% include 'web/partail/footer.html' %}
+
+    
+      <!-- Scroll To Top -->
+      <div id="scrollTopButton"><i class="bi bi-arrow-up-short"></i></div>
+      <!-- Cookie Alert Area-->
+      <div class="cookiealert">
+        <p>This site uses cookies. We use cookies to ensure you get the best experience on our website. For details, please check our <a href="#" target="_blank"> Privacy Policy.</a></p>
+        <button class="btn btn-primary btn-sm acceptcookies" type="button" aria-label="Close">I agree &amp; Close</button>
+      </div>
+
+ <!-- All JavaScript Files-->
+      <script src="{% static 'web/js/all-js-libraries.js' %}"></script>
+      <script src="{% static 'web/js/active.js' %}"></script>
+
+
+
+    </body>
+  
+  </html>
+
+
+

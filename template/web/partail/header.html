@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+  </head>
+  <body>
+
+    <!-- Header Area-->
+    <header class="header-area">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <!-- Navbar Brand --><a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'web/img/core-img/logo-white.png' %}" alt=""></a>
+          <!-- Navbar Toggler -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#saasboxNav" aria-controls="saasboxNav" aria-expanded="false" aria-label="Toggle navigation"><i class="bi bi-grid"></i></button>
+          <!-- Navbar Nav -->
+          <div class="collapse navbar-collapse" id="saasboxNav">
+            <ul class="navbar-nav navbar-nav-scroll">
+              <li class="nav-item {% if is_Home %}current{% endif %}">
+                <a class="nav-link active-link" href="{% url 'index' %}">Home</a>
+              </li>
+              <li class="nav-item {% if is_Profile %}current{% endif %}">
+                <a class="nav-link active-link" href="{% url 'Profile' %}">Profile</a>
+              </li>
+              <li class="nav-item {% if is_Award %}current{% endif %}">
+                <a class="nav-link active-link" href="{% url 'Award' %}">Award</a>
+              </li>
+              <li class="nav-item {% if is_servicestandard %}current{% endif %}">
+                <a class="nav-link active-link" href="{% url 'Business-Sector' %}">Business Sector</a>
+              </li>
+              <li class="nav-item {% if is_blog1 %}current{% endif %}">
+                <a class="nav-link active-link" href="{% url 'Update' %}">Update</a>
+              </li>
+              <li class="nav-item {% if is_Gallery %}current{% endif %}">
+                <a class="nav-link active-link" href="{% url 'Gallery' %}">Gallery</a>
+              </li>
+              <li class="nav-item {% if is_contact %}current{% endif %}">
+                <a class="nav-link active-link" href="{% url 'Contact' %}">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>  
+      </nav>
+    </header> 
+
+    <style>
+      .navbar-nav .current .active-link {
+        color: #ffc107;
+      }  
+    </style>
+   
+  </body>
+</html>

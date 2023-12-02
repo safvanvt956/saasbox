@@ -1,0 +1,104 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+ 
+  </head>
+  <body>
+
+
+    {% block content %}
+    
+    {% endblock %}
+
+
+
+    <!-- Footer Area-->
+    <footer class="footer-area footer-2 pt-120 pb-115">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <!-- Footer Widget Area -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="footer-widget-area"><a class="d-block mb-4" href="{% url 'index' %}"><img src="{% static 'web/img/core-img/logo-white.png' %}" alt=""></a>
+              <p>It's crafted with the latest trend of design &amp; coded with all modern approaches.</p>
+              <!-- Newsletter Form -->
+              <div class="newsletter-form mb-4">
+                <form class="d-flex align-items-stretch" action="#" method="POST" id="email_inline">
+                  {% csrf_token %}
+                  <input type="hidden" name="email_inline" value="email_inline">
+                  <input class="form-control rounded-0 rounded-start" type="email" placeholder="Enter email" name="email1" required>
+                  <button class="btn btn-warning rounded-0 rounded-end px-3" type="submit"><i class="bi bi-arrow-right"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Footer Widget Area-->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="footer-widget-area">
+              <h5 class="mb-4 text-white">Quick Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="{% url 'index' %}" target="_blank"><i class="bi bi-caret-right"></i>Home</a></li>
+                <li><a href="{% url 'Profile' %}" target="_blank"><i class="bi bi-caret-right"></i>Profile</a></li>
+                <li><a href="{% url 'Award' %}" target="_blank"><i class="bi bi-caret-right"></i>Award</a></li>
+                <li><a href="{% url 'Business-Sector' %}" target="_blank"><i class="bi bi-caret-right"></i>Business Sector</a></li>
+                <li><a href="{% url 'Update' %}" target="_blank"><i class="bi bi-caret-right"></i>Update</a></li>
+                <li><a href="{% url 'Gallery' %}" target="_blank"><i class="bi bi-caret-right"></i>Gallery</a></li>
+                <li><a href="{% url 'Contact' %}" target="_blank"><i class="bi bi-caret-right"></i>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Footer Widget Area-->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="footer-widget-area">
+              <h5 class="mb-4 text-white">Help</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" target="_blank"><i class="bi bi-caret-right"></i>Privacy Policy</a></li>
+                <li><a href="#" target="_blank"><i class="bi bi-caret-right"></i>Terms &amp; Conditions</a></li>
+                <li><a href="#" target="_blank"><i class="bi bi-caret-right"></i>Get Support</a></li>
+                
+              </ul>
+            </div>
+          </div>
+          <!-- Footer Widget Area -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="footer-widget-area">
+              <h5 class="mb-4 text-white">Social Media</h5>
+              
+              <ul class="list-unstyled media-list">
+                <li><a href="#" target="_blank"><i class="bi bi-facebook" style="font-size: 21px;"></i>Facebook</a></li>
+                <li><a href="#" target="_blank"><i class="bi bi-twitter" style="font-size: 21px;"></i>Twitter</a></li>
+                <li><a href="#" target="_blank"><i class="bi bi-instagram" style="font-size: 21px;"></i>Instagram</a></li>
+                <li><a href="#" target="_blank"><i class="bi bi-linkedin" style="font-size: 21px;"></i>Linkedin</a></li>
+                <li><a href="#" target="_blank"><i class="bi bi-youtube" style="font-size: 21px;"></i>YouTube</a></li>               
+              </ul>
+            
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="copywrite-wrapper ">
+          <!-- Copywrite Text -->
+          <div class="copywrite-text text-center">
+            <p class="mb-2">
+              Copyright © 2023 <a class="text-warning" target="_blank" href="https://gedexo.com/"> Gedexo </a> All rights reserved.
+            </p>
+          </div>
+          <!-- Footer Nav -->
+          
+          <!-- Dropup -->
+          
+        </div>
+      </div>
+    </footer>
+
+      <!-- All JavaScript Files-->
+      <script src="{% static 'web/js/all-js-libraries.js' %}"></script>
+      <script src="{% static 'web/js/active.js' %}"></script>
+    </body>
+  
+  </html>
+
+
+

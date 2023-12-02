@@ -1,0 +1,143 @@
+{% extends 'web/partail/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    
+  </head>
+  <body>
+    
+        <!-- Breadcrumb Area-->
+        <div class="breadcrumb-wrapper bg-img bg-overlay" style="background-image: url('{% static 'web/img/bg-img/7.jpg' %}');">
+
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12">
+            <div class="breadcrumb-content">
+              <h2 class="breadcrumb-title">Contact Us</h2>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                  <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-120 d-block"></div>
+    <!-- Contact Area-->
+    <div class="saasbox-contact-us-area">
+      <div class="container">                       
+        <div class="row g-4 justify-content-between">
+          <!-- Contact Side Info-->
+          <div class="col-12 col-lg-5 col-xl-4">
+            <div class="contact-side-info mb-4 mb-md-0">
+              <h1 class="mb-3">Let's talk about <br> all things!</h1>
+              <p class="mb-4">Write to us or give us a call. We will reply to you as soon as possible. But yes, it can take up to 24 hours.</p>
+              <div class="contact-mini-card-wrapper">
+                <!-- Contact Mini Card-->
+                <div class="contact-mini-card">
+                  <div class="contact-mini-card-icon"><i class="bi bi-envelope"></i></div>
+                  <p>example@domain.com</p>
+                </div>
+                <!-- Contact Mini Card-->
+                <div class="contact-mini-card">
+                  <div class="contact-mini-card-icon"><i class="bi bi-headphones"></i></div>
+                  <p>(+880) 145 2635896</p>
+                </div>
+                <!-- Contact Mini Card-->
+                <div class="contact-mini-card">
+                  <div class="contact-mini-card-icon"><i class="bi bi-tag"></i></div>
+                  <p>We are open from 9am — 5pm business days.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-lg-7">
+            <div class="contact-form">
+              <form action="#" id="ewt" method="POST" id="email5">
+                {% csrf_token %}
+                <input type="hidden" name="email5" value="email5">
+                <div class="row">
+  
+                  <div class="col-12 col-lg-6">
+                    <label class="form-label" for="name">Full Name:</label>
+                    <input class="form-control mb-30"  type="text" placeholder="Enter your name" value="" name="name" required>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <label class="form-label" for="email">Email Address:</label>
+                    <input class="form-control mb-30"  type="email" placeholder="Enter your email address" name="email" value="" required>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="subject">Topics:</label>
+                    <input class="form-control mb-30"  type="text" placeholder="Enter topics of interest" name="topics" value="" required>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="message">Message:</label>
+                    <textarea class="form-control mb-30"  name="message" placeholder="Enter your message" required></textarea>
+                  </div>
+                  <div class="col-12 text-center">
+                    <button class="btn btn-primary w-100" type="submit">Send Now</button>
+                  </div>
+                  
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-120 d-block"></div>
+
+    
+    <script>
+      // Attach event listener to the form submission
+      var form = document.getElementById("ewt");
+      form.addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the form from submitting normally
+  
+          // Simulate form submission success (replace with your actual form submission logic)
+          setTimeout(function () {
+              // Display SweetAlert thank you popup
+              Swal.fire({
+                  title: 'Thank You!',
+                  text: 'Your message has been sent successfully.',
+                  icon: 'success',
+                  showCancelButton: false,
+                  confirmButtonColor: '#3085d6',
+                  confirmButtonText: 'OK'
+              }).then((result) => {
+                  if (result.isConfirmed) {
+                      form.submit(); // Submit the form if the user clicks OK in SweetAlert
+                  }
+              });
+          },1000); // Display the SweetAlert popup after 1 second
+      });
+  </script>
+    
+    <!-- Scroll To Top  -->
+    <div id="scrollTopButton"><i class="bi bi-arrow-up-short"></i></div>
+
+    {% comment %} Sweetalert {% endcomment %}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+
+
+    <!-- All JavaScript Files-->
+    <script src="{% static 'web/js/all-js-libraries.js' %}"></script>
+    <script src="{% static 'web/js/active.js' %}"></script>
+  </body>
+
+</html>
+
+{% endblock %}

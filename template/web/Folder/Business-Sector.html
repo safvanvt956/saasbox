@@ -1,0 +1,79 @@
+{% extends 'web/partail/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    
+  </head>
+  <body>
+
+    <!-- Header Area-->
+    
+    <!-- Breadcrumb Area-->
+    <div class="breadcrumb-wrapper bg-img bg-overlay" style="background-image: url('{% static 'web/img/bg-img/7.jpg' %}');">
+
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12">
+            <div class="breadcrumb-content">
+              <h2 class="breadcrumb-title">Service Standard</h2>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                  <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="">Service</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Service Area -->
+    <div class="service-area service3 pt-120 pb-120">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-9 col-lg-8">
+            <div class="section-heading">
+              <h6>5 years experienced</h6>
+              <h2>We are an award-winning company &amp; provide the best services.</h2>
+              <p>It's crafted with the latest trend of design &amp; coded with all modern approaches. It's a robust &amp; multi-dimensional usable template.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row g-5 g-lg-4">
+          {% for sector in three  %}
+          <!-- Single Service Area -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card service2-card wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="100ms">
+              <div class="card-body">
+                <div class="icon"><i class="{{sector.icon}}"></i></div>
+                <h5>{{sector.title}}</h5>
+                <p class="mb-4">{{sector.parashpa}}</p><a class="btn btn-dark btn-minimal" href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+          
+        
+    <!-- Scroll To Top  -->
+    <div id="scrollTopButton"><i class="bi bi-arrow-up-short"></i></div>
+    <div class="mb-120 d-block"></div>
+    <!-- All JavaScript Files-->
+    <script src="{% static 'web/js/all-js-libraries.js' %}"></script>
+    <script src="{% static 'web/js/active.js' %}"></script>
+  </body>
+
+</html>
+
+{% endblock %}

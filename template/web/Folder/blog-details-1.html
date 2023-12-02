@@ -1,0 +1,75 @@
+{% extends 'web/partail/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <style>
+    .jsp {
+      text-align: justify;
+    }
+  </style>
+  </head>
+  <body>
+    
+<!-- Breadcrumb -->
+    <div class="breadcrumb-wrapper bg-img bg-overlay" style="background-image: url('{% static 'web/img/bg-img/12.jpg' %}');">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12">
+            <div class="breadcrumb-content">
+              <h2 class="breadcrumb-title">Blog Details </h2>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                  <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-120 d-block"></div>
+    <!-- Blog Area -->
+    <div class="saasbox-blog-area">
+      <div class="container">
+        <div class="row g-3">
+          
+          <div class="col-12">
+            <!-- Blog Details Area --><img class="rounded-3 mb-4 mb-lg-5" src="{% static 'web/img/bg-img/blog20.jpg' %}" alt="">
+            <div class="post-date mb-2">Oct 1, 2022</div>
+            <h1 class="mb-3">Seven ways agency can improve your business.</h1>
+            
+              <p class="jsp">Lorem ipsum dolor sit amet consectetur adipisicing elit Amet tempore officia pariatur harum quae cupiditate quia nisi atque qui neque molestiae doloribus repudiandae excepturi cumvero aliquid laboriosam.Tempore vitae, quod rem architecto eum a dolores eveniet dolor aperiam hic alias suscipitanimi.</p>
+              <p class="jsp">Lorem ipsum dolor sit amet consectetur adipisicing elit Amet tempore officia pariatur harum quae cupiditate quia nisi atque qui neque molestiae doloribus repudiandae excepturi cumvero aliquid laboriosam.Tempore vitae, quod rem architecto eum a dolores eveniet dolor aperiam hic alias suscipitanimi.</p>
+              <p class="jsp">Lorem ipsum dolor sit amet consectetur adipisicing elit Amet tempore officia pariatur harum quae cupiditate quia nisi atque qui neque molestiae doloribus repudiandae excepturi cumvero aliquid laboriosam.Tempore vitae, quod rem architecto eum a dolores eveniet dolor aperiam hic alias suscipitanimi.</p>
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="mb-120 d-block"></div>
+   
+    <!-- Scroll Indicator -->
+    <div id="scrollIndicator"></div>
+    <div class="mb-120 d-block"></div>
+  
+    <!-- Scroll To Top  -->
+    <div id="scrollTopButton"><i class="bi bi-arrow-up-short"></i></div>
+    <div class="mb-120 d-block"></div>
+    <!-- All JavaScript Files-->
+    <script src="{% static 'web/js/all-js-libraries.js' %}"></script>
+    <script src="{% static 'web/js/active.js' %}"></script>
+  </body>
+
+</html>
+
+{% endblock %}

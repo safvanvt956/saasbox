@@ -1,0 +1,71 @@
+{% extends 'web/partail/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    
+  </head>
+  <body>
+
+    <!-- Breadcrumb Area-->
+    <div class="breadcrumb-wrapper bg-img bg-overlay" style="background-image: url('{% static 'web/img/bg-img/7.jpg' %}');">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12">
+            <div class="breadcrumb-content">
+              <h2 class="breadcrumb-title">Blog One</h2>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                  <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-120 d-block"></div>
+
+    <!-- saasbox Blog Area-->
+    <div class="saasbox-blog-area blog-card-page">
+      <div class="container">
+        <div class="row g-4 g-md-5 justify-content-center">
+          {% for blog in blog_posts %}
+          <!-- Blog Item -->
+          <div class="col-12 col-sm-10 col-md-6 col-lg-4">
+            <div class="card blog-card border-0">
+              <div class="image-wrap"><a class="d-block" href="{% url 'blog-details-1' %}"><img src="{{blog.image.url}}" alt=""></a></div>
+              <div class="card-body p-4 pb-2">
+                <div class="post-meta d-flex align-items-center justify-content-between mb-3"><span class="fz-14"><i class="me-1 bi bi-calendar"></i>{{ blog.created_at|date:"F d, Y" }}</span><span class="fz-14"><i class="me-1 bi bi-clock"></i>{{ blog.created_at|time:"H:i A" }}</span></div><a class="post-title d-block mb-3" href="blog-details-1.html">{{blog.title}}</a>
+                <p>{{blog.parashap}}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+    <div class="mb-120 d-block"></div>
+    <!-- Cool Facts Area-->
+    
+    <div class="mb-120 d-block"></div>
+   
+    <!-- Scroll To Top  -->
+    <div id="scrollTopButton"><i class="bi bi-arrow-up-short"></i></div>
+    <div class="mb-120 d-block"></div>
+    <!-- All JavaScript Files-->
+    <script src="{% static 'web/js/all-js-libraries.js' %}"></script>
+    <script src="{% static 'web/js/active.js' %}"></script>
+  </body>
+
+</html>
+
+{% endblock %}

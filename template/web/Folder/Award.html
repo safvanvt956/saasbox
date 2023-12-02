@@ -1,0 +1,65 @@
+{% extends 'web/partail/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   
+  </head>
+  <body>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-wrapper bg-img bg-overlay" style="background-image: url('{% static 'web/img/bg-img/7.jpg' %}');">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12">
+            <div class="breadcrumb-content">
+              <h2 class="breadcrumb-title">Service Creative</h2>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                  <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Service</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-120 d-block"></div>
+    <!-- About Area-->
+    <div class="about-area about3">
+      <div class="container">
+        <div class="row justify-content-center g-3 g-lg-4">
+          <!-- Single Hero Card-->
+          {% for servive in two %}
+          <div class="col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+            <div class="card hero-card h-100 border-0 wow fadeInUp p-3" data-wow-delay="300ms" data-wow-duration="1000ms">
+              <div class="card-body"><i class="{{servive.icon}}"></i>
+                <h5>{{servive.title}}</h5>
+                <p class="mb-0">{{servive.parashpa}}</p>
+              </div>
+            </div>
+          </div>
+          <!-- Single Hero Card-->
+          
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+    <div class="mb-120 d-block"></div>
+   
+    <div id="scrollTopButton"><i class="bi bi-arrow-up-short"></i></div>
+    <!-- All JavaScript Files-->
+    <script src="{% static 'web/js/all-js-libraries.js' %}"></script>
+    <script src="{% static 'web/js/active.js' %}"></script>
+  </body>
+
+</html>
+
+{% endblock %}
