@@ -43,7 +43,7 @@
             <div class="card blog-card border-0">
               <div class="image-wrap"><a class="d-block" href="{% url 'blog-details-1' %}"><img src="{{blog.image.url}}" alt=""></a></div>
               <div class="card-body p-4 pb-2">
-                <div class="post-meta d-flex align-items-center justify-content-between mb-3"><span class="fz-14"><i class="me-1 bi bi-calendar"></i>{{ blog.created_at|date:"F d, Y" }}</span><span class="fz-14"><i class="me-1 bi bi-clock"></i>{{ blog.created_at|time:"H:i A" }}</span></div><a class="post-title d-block mb-3" href="blog-details-1.html">{{blog.title}}</a>
+                <div class="post-meta d-flex align-items-center justify-content-between mb-3"><span class="fz-14"><i class="me-1 bi bi-calendar"></i>{{ blog.created_at|date:"F d, Y" }}</span><span class="fz-14"><i class="me-1 bi bi-clock"></i>{{ blog.created_at|time:"H:i A" }}</span></div><a class="post-title d-block mb-3" href="{% url 'blog-details-1' %}">{{blog.title}}</a>
                 <p>{{blog.parashap}}</p>
               </div>
             </div>
